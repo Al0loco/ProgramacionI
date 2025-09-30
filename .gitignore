@@ -1,1 +1,13 @@
+# Archivos temporales de Visual Studio
+.vs/
+*.vsidx
+*.user
+*.suo
+Debug/
+Release/
+x64/
+*.obj
+*.pdb
+*.log
+*.tmp
 
