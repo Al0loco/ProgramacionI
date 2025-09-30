@@ -18,6 +18,9 @@
     <ClCompile Include="ProyectoAlonsoCampos1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Ejercicio.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ClaseGrupal.h">

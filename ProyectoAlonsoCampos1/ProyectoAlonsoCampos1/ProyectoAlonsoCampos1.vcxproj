@@ -123,6 +123,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Ejercicio.cpp" />
     <ClCompile Include="ProyectoAlonsoCampos1.cpp" />
   </ItemGroup>
   <ItemGroup>
