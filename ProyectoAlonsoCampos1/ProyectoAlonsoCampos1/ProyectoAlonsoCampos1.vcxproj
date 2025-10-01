@@ -124,6 +124,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Ejercicio.cpp" />
+    <ClCompile Include="Instructor.cpp" />
+    <ClCompile Include="Medicion.cpp" />
     <ClCompile Include="ProyectoAlonsoCampos1.cpp" />
   </ItemGroup>
   <ItemGroup>

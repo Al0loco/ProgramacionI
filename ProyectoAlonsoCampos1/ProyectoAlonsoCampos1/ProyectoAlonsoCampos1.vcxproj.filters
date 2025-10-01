@@ -21,6 +21,12 @@
     <ClCompile Include="Ejercicio.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Medicion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Instructor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ClaseGrupal.h">
