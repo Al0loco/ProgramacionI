@@ -6,7 +6,6 @@ using namespace std;
 class Cliente;
 class Medicion;
 class Rutina;
-class Sucursal; 
 
 class Instructor {
 private:

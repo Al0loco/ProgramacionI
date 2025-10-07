@@ -123,10 +123,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ClaseGrupal.cpp" />
+    <ClCompile Include="Cliente.cpp" />
     <ClCompile Include="Ejercicio.cpp" />
     <ClCompile Include="Instructor.cpp" />
     <ClCompile Include="Medicion.cpp" />
+    <ClCompile Include="PowerLab.cpp" />
     <ClCompile Include="ProyectoAlonsoCampos1.cpp" />
+    <ClCompile Include="Rutina.cpp" />
+    <ClCompile Include="Sucursal.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ClaseGrupal.h" />
@@ -134,6 +139,7 @@
     <ClInclude Include="Ejercicio.h" />
     <ClInclude Include="Instructor.h" />
     <ClInclude Include="Medicion.h" />
+    <ClInclude Include="PowerLab.h" />
     <ClInclude Include="Rutina.h" />
     <ClInclude Include="Sucursal.h" />
   </ItemGroup>
