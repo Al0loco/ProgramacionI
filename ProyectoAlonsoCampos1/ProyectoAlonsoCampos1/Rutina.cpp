@@ -76,7 +76,7 @@ void Rutina::mostrarEjercicios() {
 
     for (int i = 0; i < numEjercicios; i++) {
         cout << (i+1) << ". " << *ejercicios[i]->getNombre()
-             << " | Zona: " << *ejercicios[i]->getZona()
+             << " | Zona: " << *ejercicios[i]->getZonaMuscular()
              << " | Descripcion: " << *ejercicios[i]->getDescripcion()
              << endl;
     }

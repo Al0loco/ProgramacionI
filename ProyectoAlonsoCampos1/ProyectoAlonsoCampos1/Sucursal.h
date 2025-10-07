@@ -1,8 +1,9 @@
 #pragma once
 #include <iostream>
+#include "Instructor.h" // <-- Add this include to ensure Instructor is recognized
 using namespace std;
-// Forward declarations para evitar inclusiones circulares
-// inclusiones circulares: cuando dos o más archivos de encabezado se incluyen mutuamente, lo que puede causar errores de compilación.
+
+// Declaraciones para evitar inclusiones circulares
 class Instructor;   
 class Cliente;      
 class ClaseGrupal;  

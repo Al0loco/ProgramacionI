@@ -1,4 +1,5 @@
-#include "sucursal.h"
+#include "Sucursal.h"
+
 
 // Se define tamaño máximo para los arreglos dinámicos de punteros
 const int MAX_INSTRUCTORES = 12;   // Se establece límite en sucursal 

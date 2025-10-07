@@ -267,10 +267,10 @@ void Cliente::mostrarHistorialMediciones() {
 void Cliente::mostrarRutina() {
     cout << "===== RUTINA DEL CLIENTE " << *nombre << " =====" << endl;
 
-    if (rutina == nullptr) {
+    if (rutinaActual == nullptr) {
         cout << "El cliente no tiene una rutina asignada actualmente." << endl;
     } else {
-        rutina->mostrarEjercicios();
+        rutinaActual->mostrarEjercicios();
     }
 
     cout << "==============================================" << endl;
@@ -284,10 +284,10 @@ void Cliente::listarClases() {
         cout << "El cliente no esta matriculado en ninguna clase grupal." << endl;
     } else {
         for (int i = 0; i < numClases; i++) { // se recorren las clases
-            cout << (i+1) << ". Codigo: " << *clases[i]->getCodigo() // se muestra la información básica
-                 << " | Tipo: " << *clases[i]->getTipo()
-                 << " | Horario: " << *clases[i]->getHorario()
-                 << " | Instructor: " << *clases[i]->getInstructor()->getNombre()
+            cout << (i+1) << ". Codigo: " << *clasesMatriculadas[i]->getCodigo() // se muestra la información básica
+                 << " | Tipo: " << *clasesMatriculadas[i]->getTipo()
+                 << " | Horario: " << *clasesMatriculadas[i]->getHorario()
+                 << " | Instructor: " << *clasesMatriculadas[i]->getInstructor()->getNombre()
                  << endl;
         }
     }

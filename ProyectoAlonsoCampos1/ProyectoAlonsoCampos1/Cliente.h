@@ -1,54 +1,72 @@
-#pragma once
-#include <iostream>
-using namespace std;
-// Forward declarations para evitar inclusiones circulares
-class Instructor;
-class Medicion;
-class ClaseGrupal;
-class Rutina;
+
+#include <string>
+#include "Instructor.h"
+#include "Medicion.h"
+#include "ClaseGrupal.h"
+#include "Rutina.h"
 
 class Cliente {
 private:
-    string* cedula;
-    string* nombre;
-    string* telefono;
-    string* correo;
-    string* fechaNacimiento;
+    // Datos personales
+    std::string* cedula;
+    std::string* nombre;
+    std::string* telefono;
+    std::string* correo;
+    std::string* fechaNacimiento;
     char* sexo;
-    string* fechaInscripcion;
+    std::string* fechaInscripcion;
+
+    // Relaciones con otras clases
     Instructor* instructor;
-    Medicion** mediciones;        // máx 10
-    ClaseGrupal** clasesMatriculadas; // máx 3
     Rutina* rutinaActual;
+
+    // Arreglos de asociaciones
+    Medicion** mediciones;           // máx. 10 mediciones
+    ClaseGrupal** clasesMatriculadas; // máx. 3 clases
+    int numClases = 0;               // cantidad actual de clases
+
 public:
-// Constructores y destructores
+    // Constructores y destructor
     Cliente();
-    Cliente(string*, string*, string*, string*, string*, char*, string*);
+    Cliente(std::string* _cedula, std::string* _nombre, std::string* _telefono,
+        std::string* _correo, std::string* _fechaNacimiento,
+        char* _sexo, std::string* _fechaInscripcion);
     ~Cliente();
-// Funciones set
-    void setCedula(string*);
-    void setNombre(string*);
-    void setTelefono(string*);
-    void setCorreo(string*);
-    void setFechaNacimiento(string*);
-    void setSexo(char*);
-    void setFechaInscripcion(string*);
-    void setInstructor(Instructor*);
-    void setRutina(Rutina*);
-// Funciones get
-    string* getCedula();
-    string* getNombre();
-    string* getTelefono();
-    string* getCorreo();
-    string* getFechaNacimiento();
+
+    // Setters
+    void setCedula(std::string* _cedula);
+    void setNombre(std::string* _nombre);
+    void setTelefono(std::string* _telefono);
+    void setCorreo(std::string* _correo);
+    void setFechaNacimiento(std::string* _fecha);
+    void setSexo(char* _sexo);
+    void setFechaInscripcion(std::string* _fecha);
+    void setInstructor(Instructor* _instructor);
+    void setRutina(Rutina* _rutina);
+
+    // Getters
+    std::string* getCedula();
+    std::string* getNombre();
+    std::string* getTelefono();
+    std::string* getCorreo();
+    std::string* getFechaNacimiento();
     char* getSexo();
-    string* getFechaInscripcion();
+    std::string* getFechaInscripcion();
     Instructor* getInstructor();
     Rutina* getRutina();
-// Funciones accionales
-    bool addMedicion(Medicion*);
+
+    // Funciones adicionales
+    bool addMedicion(Medicion* m);
     Medicion** getHistorial();
-    void asignarInstructor(Instructor*);
-    void asignarRutina(Rutina*);
+
+    void asignarInstructor(Instructor* i);
+    void asignarRutina(Rutina* r);
     Rutina* verRutina();
+
+    bool matricularClase(ClaseGrupal* c);
+
+    void generarReporteMedicion(int indiceMedicion, bool haceEjercicio);
+    void mostrarHistorialMediciones();
+    void mostrarRutina();
+    void listarClases();
 };

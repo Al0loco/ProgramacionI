@@ -90,7 +90,7 @@ string* Instructor::getFechaNacimiento() {
 // Otros métodos
 void Instructor::addEspecialidad(string* esp) {
 	if (numEspecialidades < MAX_ESPECIALIDADES) {
-		especialidades[numEspecialidades] = new string(*especialidad); // Asignar nueva especialidad
+		especialidades[numEspecialidades] = new string(*esp); // Asignar nueva especialidad
 		numEspecialidades++;
 	} else {
 		cout << "No se pueden agregar más especialidades. Límite alcanzado." << endl;
